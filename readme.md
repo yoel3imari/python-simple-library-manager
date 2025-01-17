@@ -2,9 +2,9 @@
 
 ## Workflow
 
-[x] - create venv
-[x] - create project structure
-[x] - impl classes
-[x] - add exceptions
-[x] - create tests
-[x] - create user interface (console)
+- [ ] create venv
+- [ ] create project structure
+- [ ] impl classes
+- [ ] add exceptions
+- [ ] create tests
+- [ ] create user interface (console)
