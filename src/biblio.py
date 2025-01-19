@@ -1,2 +1,0 @@
-class Biblio:
-    pass
