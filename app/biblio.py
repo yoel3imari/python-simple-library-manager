@@ -78,7 +78,7 @@ class Biblio:
         with open(file_path, "w") as books:
             writer = csv.DictWriter(books, fieldnames=fieldnames)
             for livre in self.book_list:
-                writer.writerow(livre.toRow())
+                writer.writerow(livre.to_row())
     
     def load_books(self, file_name: str="books.csv"):
         """Télécharger les livres sauvegarder dans un fichier csv

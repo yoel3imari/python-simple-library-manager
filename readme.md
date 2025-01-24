@@ -8,3 +8,7 @@
 - [x] add exceptions
 - [x] create tests
 - [x] create user interface (console)
+
+## Extra
+- [ ] sqlite databse
+- [ ] user login

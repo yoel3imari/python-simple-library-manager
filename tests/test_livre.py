@@ -15,11 +15,11 @@ class TestLivre(unittest.TestCase):
         expected_str = '- "aaa [aaa](4578)"'
         self.assertEqual(str(livre), expected_str)
 
-    def test_livre_toRow(self):
+    def test_livre_to_row(self):
         livre = Livre("aaa", "aaa", "1943")
         expected_row = {
             "titre": "aaa",
             "auteur": "-aaa",
             "annee_pub": "1943",
         }
-        self.assertEqual(livre.toRow(), expected_row)
+        self.assertEqual(livre.to_row(), expected_row)
