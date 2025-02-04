@@ -22,9 +22,9 @@ class User:
                 {"username": "TEXT NOT NULL UNIQUE", "password": "TEXT NOT NULL"},
             )
             self._seed()
-    
+
     def _seed(self):
-        admin = self.get_user_by_username('admin')
+        admin = self.get_user_by_username("admin")
         if admin is None:
             self.create_user("admin", "password")
 
@@ -42,7 +42,7 @@ class User:
     def create_user(self, username, password):
         if not username or not password:
             raise ValueError("Username and password cannot be empty.")
-        pwhash = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+        pwhash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
         data = {"username": username, "password": pwhash}
         return self.db.insert(self.table_name, data)
 

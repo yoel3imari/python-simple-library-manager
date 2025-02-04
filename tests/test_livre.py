@@ -4,6 +4,7 @@ from app.livre import Livre
 
 
 class TestLivre(unittest.TestCase):
+
     def test_livre_initialization(self):
         livre = Livre("aaa", "aaa", "1555")
         self.assertEqual(livre.titre, "aaa")

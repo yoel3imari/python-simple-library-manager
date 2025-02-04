@@ -10,5 +10,6 @@
 - [x] create user interface (console)
 
 ## Extra
-- [ ] sqlite databse
-- [ ] user login
+- [x] sqlite databse
+- [x] user login
+- [ ] CRUD users

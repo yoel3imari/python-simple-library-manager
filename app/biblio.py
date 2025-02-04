@@ -15,7 +15,6 @@ class Biblio:
         for b in book_list:
             self.add_book(b)
 
-
     def add_book(self, book: Livre):
         """Ajouter un livre au biblio
 
@@ -36,7 +35,6 @@ class Biblio:
             return False
         return True
         
-    
     def remove_book(self, title: str):
         """retirer un livre avec le titre
 

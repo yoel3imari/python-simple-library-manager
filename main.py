@@ -18,7 +18,6 @@ def clear_terminal():
     else:
         os.system("clear")  # macOS, Linux, and other Unix-like systems
 
-
 def afficher_menu():
     # clear_terminal()
     print(Fore.CYAN, "\n--- Gestion de la Bibliothèque ---")
@@ -30,13 +29,12 @@ def afficher_menu():
     print("5. Charger les livres depuis un fichier")
     print("6. Quitter")
 
-
 def user_login(db):
     print("------", Fore.CYAN, "Login", Fore.RESET, "------\n")
     user = None
     user_model = User(database=db)
     while user is None:
-        username = input("username:")
+        username = input("username (admin):")
         user = user_model.get_user_by_username(username=username)
         if user is None:
             print(Fore.RED, "No user with the provided username", Fore.RESET)
@@ -44,7 +42,7 @@ def user_login(db):
 
     while True:
         # verify password
-        password = getpass("password:")
+        password = getpass("password (password):")
         if bcrypt.checkpw(password.encode('utf-8'), user.password):
             break
 
@@ -56,7 +54,6 @@ def user_login(db):
     )
  
     return user
-
 
 def main():
     biblio = Biblio()
@@ -143,7 +140,6 @@ def main():
     except KeyboardInterrupt:
         print(Fore.YELLOW, "\nMerci d'avoir utilisé le programme. Au revoir !")
         exit(0)  # Exit the program with a status code of 0 (success)
-
 
 if __name__ == "__main__":
     main()

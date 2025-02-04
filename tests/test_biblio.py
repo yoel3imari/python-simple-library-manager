@@ -42,7 +42,6 @@ class TestBiblio(unittest.TestCase):
         self.biblio.add_book(self.livre2)
         self.biblio.show_books()
 
-
     def test_save_books(self):
         self.biblio.add_book(self.livre1)
         self.biblio.add_book(self.livre2)
@@ -53,8 +52,8 @@ class TestBiblio(unittest.TestCase):
             reader = csv.DictReader(file)
             rows = list(reader)
             self.assertEqual(len(rows), 2)
-            self.assertEqual(rows[0]["titre"], "aaa")
-            self.assertEqual(rows[1]["titre"], "ccc")
+            self.assertEqual(rows[0][0], "aaa")
+            self.assertEqual(rows[1][0], "ccc")
 
     def test_save_books_to_new_file(self):
         self.biblio.add_book(self.livre1)
